@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Pod
 %define	pnam	GroveBuilder
@@ -6,13 +10,17 @@ Summary(pl):	Modu³ perla Pod::GroveBuilder
 Name:		perl-Pod-GroveBuilder
 Version:	0.01
 Release:	10
-License:	GPL
+# as perl itself in README, COPYING says Artistic
+License:	GPLv1 or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	af37328dd21b302a425092243bf365a0
 Patch0:		%{name}-man.patch
 Patch1:		%{name}-SGML-SPGroveBuilder.patch
 BuildRequires:	perl-devel >= 5.6.1
+%if %{with tests}
+BuildRequires:	perl-SGML-SPGroveBuilder
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,6 +41,8 @@ dokumentów POD.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
