@@ -3,21 +3,27 @@ Summary:	Pod-GroveBuilder perl module
 Summary(pl):	Modu³ perla Pod-GroveBuilder
 Name:		perl-Pod-GroveBuilder
 Version:	0.01
-Release:	6
+Release:	7
 License:	GPL
 Group:		Development/Languages/Perl
 Group(cs):	Vývojové prostøedky/Programovací jazyky/Perl
+Group(da):	Udvikling/Sprog/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(es):	Desarrollo/Lenguajes/Perl
 Group(fr):	Development/Langues/Perl
+Group(is):	Þróunartól/Forritunarmál/Perl
+Group(it):	Sviluppo/Linguaggi/Perl
 Group(ja):	³«È¯/¸À¸ì/Perl
+Group(no):	Utvikling/Programmeringsspråk/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Group(pt):	Desenvolvimento/Linguagens/Perl
 Group(ru):	òÁÚÒÁÂÏÔËÁ/ñÚÙËÉ/Perl
+Group(sl):	Razvoj/Jeziki/Perl
+Group(sv):	Utveckling/Språk/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Pod/Pod-GroveBuilder-%{version}.tar.gz
 Patch0:		%{name}-man.patch
 Patch1:		%{name}-SGML-SPGroveBuilder.patch
-BuildRequires:	perl >= 5.005_03-10
+BuildRequires:	perl-devel >= 5.6.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
