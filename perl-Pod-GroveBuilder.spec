@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Pod
 %define	pnam	GroveBuilder
-%include	/usr/lib/rpm/macros.perl
 Summary:	Pod-GroveBuilder perl module
 Summary(pl):	Modu³ perla Pod-GroveBuilder
 Name:		perl-Pod-GroveBuilder
 Version:	0.01
-Release:	8
-
+Release:	9
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -25,7 +24,7 @@ Pod-GroveBuilder - modu³ do tworzenia obiektów SGML::Grove z
 dokumentów POD.
 
 %prep
-%setup -q -n Pod-GroveBuilder-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 %patch0 -p0
 %patch1 -p1
 
