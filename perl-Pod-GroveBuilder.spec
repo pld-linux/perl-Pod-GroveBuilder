@@ -10,8 +10,8 @@ Summary(pl):	Modu³ perla Pod::GroveBuilder
 Name:		perl-Pod-GroveBuilder
 Version:	0.01
 Release:	10
-# as perl itself in README, COPYING says Artistic
-License:	GPLv1 or Artistic
+# same as perl (in README, COPYING says Artistic)
+License:	GPL v1 or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	af37328dd21b302a425092243bf365a0
