@@ -1,0 +1,54 @@
+%define		perl_sitelib	%(eval "`perl -V:installsitelib`"; echo $installsitelib)
+Summary:	Pod-GroveBuilder perl module
+Summary(pl):	Modu³ perla Pod-GroveBuilder
+Name:		perl-Pod-GroveBuilder
+Version:	0.01
+Release:	3
+Copyright:	GPL
+Group:		Development/Languages/Perl
+Group(pl):	Programowanie/Jêzyki/Perl
+Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Pod/Pod-GroveBuilder-%{version}.tar.gz
+Patch:		perl-Pod-GroveBuilder-man.patch
+BuildRequires:	perl >= 5.005_03-10
+%requires_eq	perl
+Requires:	%{perl_sitearch}
+BuildRoot:	/tmp/%{name}-%{version}-root
+
+%description
+Pod-GroveBuilder - module for creating SGML::Grove objects from POD documents. 
+
+%description -l pl
+Pod-GroveBuilder - modu³ do tworzenia obiektów SGML::Grove z dokumentów POD.
+
+%prep
+%setup -q -n Pod-GroveBuilder-%{version}
+%patch -p0
+
+%build
+perl Makefile.PL
+make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+make install DESTDIR=$RPM_BUILD_ROOT
+
+(
+  cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/Pod/GroveBuilder
+  sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
+  mv .packlist.new .packlist
+)
+
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
+        Changes ChangeLog README
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%doc {Changes,ChangeLog,README}.gz
+
+%{perl_sitelib}/Pod/GroveBuilder.pm
+%{perl_sitearch}/auto/Pod/GroveBuilder
+
+%{_mandir}/man3/*
