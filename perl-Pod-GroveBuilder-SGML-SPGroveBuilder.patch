@@ -1,0 +1,12 @@
+diff -u Pod-GroveBuilder-0.01.orig/GroveBuilder.pm Pod-GroveBuilder-0.01/GroveBuilder.pm
+--- Pod-GroveBuilder-0.01.orig/GroveBuilder.pm	Thu May  3 02:18:09 2001
++++ Pod-GroveBuilder-0.01/GroveBuilder.pm	Thu May  3 02:18:20 2001
+@@ -10,7 +10,7 @@
+ use strict;
+ use vars qw($VERSION @ISA);
+ 
+-use SGML::SPGrove;
++use SGML::SPGroveBuilder;
+ 
+ @ISA = qw(Pod::Parser);
+ $VERSION = '0.01';
