@@ -3,7 +3,7 @@ Summary:	Pod-GroveBuilder perl module
 Summary(pl):	Modu³ perla Pod-GroveBuilder
 Name:		perl-Pod-GroveBuilder
 Version:	0.01
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
