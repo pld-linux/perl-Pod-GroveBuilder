@@ -1,4 +1,4 @@
-%define		perl_sitelib	%(eval "`perl -V:installsitelib`"; echo $installsitelib)
+%include	/usr/lib/rpm/macros.perl
 Summary:	Pod-GroveBuilder perl module
 Summary(pl):	Modu³ perla Pod-GroveBuilder
 Name:		perl-Pod-GroveBuilder
