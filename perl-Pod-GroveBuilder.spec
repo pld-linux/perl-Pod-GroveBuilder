@@ -11,8 +11,6 @@ Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Pod/Pod-GroveBuilder-%{version}.tar.gz
 Patch0:		%{name}-man.patch
 BuildRequires:	perl >= 5.005_03-10
-%requires_eq	perl
-Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
