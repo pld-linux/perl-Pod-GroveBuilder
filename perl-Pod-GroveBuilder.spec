@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Pod
-%define	pnam	GroveBuilder
+%define		pdir	Pod
+%define		pnam	GroveBuilder
 Summary:	Pod::GroveBuilder perl module
 Summary(pl):	Modu³ perla Pod::GroveBuilder
 Name:		perl-Pod-GroveBuilder
