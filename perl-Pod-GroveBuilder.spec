@@ -9,6 +9,7 @@ Release:	10
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	af37328dd21b302a425092243bf365a0
 Patch0:		%{name}-man.patch
 Patch1:		%{name}-SGML-SPGroveBuilder.patch
 BuildRequires:	perl-devel >= 5.6.1
