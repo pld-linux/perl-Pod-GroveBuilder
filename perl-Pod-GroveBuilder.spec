@@ -10,6 +10,7 @@ Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Pod/Pod-GroveBuilder-%{version}.tar.gz
 Patch0:		%{name}-man.patch
+Patch1:		perl-Pod-GroveBuilder-SGML-SPGroveBuilder.patch
 BuildRequires:	perl >= 5.005_03-10
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,7 +24,8 @@ dokumentów POD.
 
 %prep
 %setup -q -n Pod-GroveBuilder-%{version}
-%patch -p0
+%patch0 -p0
+%patch1 -p1
 
 %build
 perl Makefile.PL
