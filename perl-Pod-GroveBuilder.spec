@@ -5,7 +5,7 @@ Summary:	Pod::GroveBuilder perl module
 Summary(pl):	Modu³ perla Pod::GroveBuilder
 Name:		perl-Pod-GroveBuilder
 Version:	0.01
-Release:	9
+Release:	10
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -29,7 +29,8 @@ dokumentów POD.
 %patch1 -p1
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -43,5 +44,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes ChangeLog README
-%{perl_sitelib}/Pod/GroveBuilder.pm
+%{perl_vendorlib}/Pod/GroveBuilder.pm
 %{_mandir}/man3/*
