@@ -1,0 +1,10 @@
+--- GroveBuilder.pm~	Fri Jan  2 22:46:42 1998
++++ GroveBuilder.pm	Sun Oct 17 23:18:24 1999
+@@ -49,6 +49,7 @@
+ 
+ 1;
+ __END__
++
+ =head1 NAME
+ 
+ Pod::GroveBuilder - use Pod::Parser to create SGML::Grove objects
