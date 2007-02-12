@@ -6,7 +6,7 @@
 %define		pdir	Pod
 %define		pnam	GroveBuilder
 Summary:	Pod::GroveBuilder perl module
-Summary(pl):	Modu≥ perla Pod::GroveBuilder
+Summary(pl.UTF-8):   Modu≈Ç perla Pod::GroveBuilder
 Name:		perl-Pod-GroveBuilder
 Version:	0.01
 Release:	11
@@ -28,9 +28,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Pod::GroveBuilder - module for creating SGML::Grove objects from POD
 documents.
 
-%description -l pl
-Pod::GroveBuilder - modu≥ do tworzenia obiektÛw SGML::Grove z
-dokumentÛw POD.
+%description -l pl.UTF-8
+Pod::GroveBuilder - modu≈Ç do tworzenia obiekt√≥w SGML::Grove z
+dokument√≥w POD.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
