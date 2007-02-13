@@ -6,7 +6,7 @@
 %define		pdir	Pod
 %define		pnam	GroveBuilder
 Summary:	Pod::GroveBuilder perl module
-Summary(pl.UTF-8):   Moduł perla Pod::GroveBuilder
+Summary(pl.UTF-8):	Moduł perla Pod::GroveBuilder
 Name:		perl-Pod-GroveBuilder
 Version:	0.01
 Release:	11
