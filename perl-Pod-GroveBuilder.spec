@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Pod
 %define		pnam	GroveBuilder
+%include	/usr/lib/rpm/macros.perl
 Summary:	Pod::GroveBuilder perl module
 Summary(pl.UTF-8):	Moduł perla Pod::GroveBuilder
 Name:		perl-Pod-GroveBuilder
@@ -16,6 +16,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	af37328dd21b302a425092243bf365a0
 Patch0:		%{name}-man.patch
+URL:		http://search.cpan.org/dist/Pod-GroveBuilder/
 Patch1:		%{name}-SGML-SPGroveBuilder.patch
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
