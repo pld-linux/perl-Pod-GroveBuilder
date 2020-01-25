@@ -4,7 +4,6 @@
 
 %define		pdir	Pod
 %define		pnam	GroveBuilder
-%include	/usr/lib/rpm/macros.perl
 Summary:	Pod::GroveBuilder perl module
 Summary(pl.UTF-8):	Moduł perla Pod::GroveBuilder
 Name:		perl-Pod-GroveBuilder
