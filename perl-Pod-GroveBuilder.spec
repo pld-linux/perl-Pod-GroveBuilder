@@ -8,7 +8,7 @@ Summary:	Pod::GroveBuilder perl module
 Summary(pl.UTF-8):	Moduł perla Pod::GroveBuilder
 Name:		perl-Pod-GroveBuilder
 Version:	0.01
-Release:	11
+Release:	12
 # same as perl (in README, COPYING says Artistic)
 License:	GPL v1 or Artistic
 Group:		Development/Languages/Perl
